@@ -1,3 +1,4 @@
+using System.Reflection.Emit;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
@@ -43,11 +44,14 @@ namespace EchoMessenger
             Txtchett.Clear();
             Txtchett.Focus();
 
-            string typed_msg;
-            typed_msg = Txtchett.Text;
-           
-            Txtchett.Clear();
-            Txtchett.Focus();
+            string currentTime = DateTime.Now.ToString("tt hh:mm:ss");
+
+            // 시간과 메시지 결합하여 리스트박스(LBX)에 추가
+            LBX.Items.Add($"[{currentTime}] ");
+
+            LBX.TopIndex = LBX.Items.Count - 1;
+            LBcount.Text = $"총 메시지 개수: {(LBX.Items.Count)/2}개";
+
 
         }
 

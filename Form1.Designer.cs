@@ -32,6 +32,7 @@
             lbltitle = new Label();
             Txtchett = new TextBox();
             LBX = new ListBox();
+            LBcount = new Label();
             SuspendLayout();
             // 
             // BtnEnter
@@ -76,12 +77,22 @@
             LBX.TabIndex = 3;
             LBX.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
+            // LBcount
+            // 
+            LBcount.AutoSize = true;
+            LBcount.Location = new Point(634, 282);
+            LBcount.Name = "LBcount";
+            LBcount.Size = new Size(109, 20);
+            LBcount.TabIndex = 4;
+            LBcount.Text = "총 메세지 개수";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(800, 450);
+            Controls.Add(LBcount);
             Controls.Add(LBX);
             Controls.Add(Txtchett);
             Controls.Add(lbltitle);
@@ -99,5 +110,6 @@
         private Label lbltitle;
         private TextBox Txtchett;
         private ListBox LBX;
+        private Label LBcount;
     }
 }
