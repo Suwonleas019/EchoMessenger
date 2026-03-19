@@ -33,6 +33,8 @@
             Txtchett = new TextBox();
             LBX = new ListBox();
             LBcount = new Label();
+            BtnDelete = new Button();
+            BtnAllDelete = new Button();
             SuspendLayout();
             // 
             // BtnEnter
@@ -86,12 +88,34 @@
             LBcount.TabIndex = 4;
             LBcount.Text = "총 메세지 개수";
             // 
+            // BtnDelete
+            // 
+            BtnDelete.Location = new Point(639, 84);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(94, 29);
+            BtnDelete.TabIndex = 5;
+            BtnDelete.Text = "삭제";
+            BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
+            // 
+            // BtnAllDelete
+            // 
+            BtnAllDelete.Location = new Point(448, 26);
+            BtnAllDelete.Name = "BtnAllDelete";
+            BtnAllDelete.Size = new Size(167, 29);
+            BtnAllDelete.TabIndex = 6;
+            BtnAllDelete.Text = "모든 대화 삭제";
+            BtnAllDelete.UseVisualStyleBackColor = true;
+            BtnAllDelete.Click += BtnAllDelete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 255, 192);
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnAllDelete);
+            Controls.Add(BtnDelete);
             Controls.Add(LBcount);
             Controls.Add(LBX);
             Controls.Add(Txtchett);
@@ -111,5 +135,7 @@
         private TextBox Txtchett;
         private ListBox LBX;
         private Label LBcount;
+        private Button BtnDelete;
+        private Button BtnAllDelete;
     }
 }
