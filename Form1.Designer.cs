@@ -64,6 +64,8 @@
             Txtchett.Name = "Txtchett";
             Txtchett.Size = new Size(575, 27);
             Txtchett.TabIndex = 2;
+            Txtchett.TextChanged += Txtchett_TextChanged;
+            Txtchett.KeyDown += Txtchett_KeyDown;
             // 
             // LBX
             // 
